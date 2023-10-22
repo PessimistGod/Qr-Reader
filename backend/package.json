@@ -20,6 +20,7 @@
     "mongoose": "^7.6.3",
     "pg": "^8.11.3",
     "pg-promise": "^11.5.4",
+    "vercel": "^32.4.1",
     "pool": "^0.4.1"
   },
   "devDependencies": {
