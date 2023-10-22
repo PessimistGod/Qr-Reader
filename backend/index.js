@@ -11,7 +11,7 @@ const port = process.env.PORT || 6000;
 
 
 const corsOptions = {
-    origin: ["https://qr-reader-olive.vercel.app", "http://localhost:3000"],
+    origin: ["https://qr-reader-olive.vercel.app","https://qr-reader-olive.vercel.app/login", "http://localhost:3000"],
     methods: ["POST", "GET", "PUT", "DELETE"],
     credentials: true,
   };
