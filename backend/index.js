@@ -8,10 +8,11 @@ const jwt = require('jsonwebtoken');
 
 const app = express();
 const port = process.env.PORT || 6000;
+app.use(express.json());
 
 
 const corsOptions = {
-    origin: ["https://qr-reader-frontend-pessimistgod.vercel.app","https://qr-reader-frontend.vercel.app","https://qr-reader-olive.vercel.app/", "http://localhost:3000"],
+    origin: ["https://qr-reader-frontend-pessimistgod.vercel.app","https://qr-reader-frontend.vercel.app","https://qr-reader-olive.vercel.app", "http://localhost:3000"],
     methods: ["POST", "GET", "PUT", "DELETE"],
     credentials: true,
   };
@@ -24,7 +25,6 @@ const pool = new Pool({
 })
 
 
-app.use(express.json());
 
 // Sign up a new user
 app.post('/signup', async (req, res) => {
