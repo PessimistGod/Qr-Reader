@@ -21,6 +21,8 @@ const QrCodeReader = () => {
           Navigate('/login')
         }
       } catch (error) {
+      Navigate('/login')
+
         console.error('Error decoding the JWT:', error);
       }
     }else{
