@@ -24,7 +24,7 @@ const QrCodeReader = () => {
         console.error('Error decoding the JWT:', error);
       }
     }
-  }, [Navigate]);
+  }, []);
 
   const handleScan = async (data) => {
     if (data) {
