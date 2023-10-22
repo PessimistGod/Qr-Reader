@@ -9,7 +9,14 @@ const jwt = require('jsonwebtoken');
 const app = express();
 const port = process.env.PORT || 6000;
 
-app.use(cors())
+
+const corsOptions = {
+    origin: ["https://qr-reader-olive.vercel.app", "http://localhost:3000"],
+    methods: ["POST", "GET", "PUT", "DELETE"],
+    credentials: true,
+  };
+
+app.use(cors(corsOptions))
 
 
 const pool = new Pool({
