@@ -27,7 +27,7 @@ app.get('/', (req, res) => {
   });
 
 // Sign up a new user
-app.post('/signup', cors(), async (req, res) => {
+app.post('/signup', async (req, res) => {
     try {
         const { name, email, password } = req.body;
 
@@ -53,7 +53,7 @@ app.post('/signup', cors(), async (req, res) => {
 
 
 // Login with existing user
-app.post('/login', cors(),async (req, res) => {
+app.post('/login',async (req, res) => {
     try {
         const { email, password } = req.body;
         const query = 'SELECT * FROM users WHERE email = $1';
@@ -83,7 +83,7 @@ app.post('/login', cors(),async (req, res) => {
 
 
 // Create a QR code
-app.post('/qrcodes', cors(), async (req, res) => {
+app.post('/qrcodes', async (req, res) => {
     try {
         const { user_id, data } = req.body;
 
@@ -102,7 +102,7 @@ console.log('Data Values:', values);
 
 
 // Fetch all QR codes related to a user
-app.get('/qrcodes/:user_id', cors(), async (req, res) => {
+app.get('/qrcodes/:user_id', async (req, res) => {
     try {
       const user_id = req.params.user_id;
       const page = parseInt(req.query.page);
@@ -129,7 +129,7 @@ app.get('/qrcodes/:user_id', cors(), async (req, res) => {
   
 
 // Delete a QR code entry
-app.delete('/qrcodes/:id', cors(), async (req, res) => {
+app.delete('/qrcodes/:id', async (req, res) => {
     try {
         const id = req.params.id;
         const deleteQuery = 'DELETE FROM qr_data WHERE id = $1';
