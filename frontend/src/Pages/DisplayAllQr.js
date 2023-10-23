@@ -24,6 +24,8 @@ const DisplayAllQr = () => {
       else{
         Navigate('/login')
       }
+    }else{
+      Navigate('/login')
     }
   }, [Navigate]);
 
