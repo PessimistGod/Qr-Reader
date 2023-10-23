@@ -12,7 +12,7 @@ app.use(express.json());
 
 
 const corsOptions = {
-    origin: ["https://qr-reader-frontend.vercel.app","https://qr-reader-olive.vercel.app", "http://localhost:3000"],
+    origin: ["https://qr-reader-frontend.vercel.app", "http://localhost:3000"],
     methods: ["POST", "GET", "PUT", "DELETE"],
     credentials: true,
   };
