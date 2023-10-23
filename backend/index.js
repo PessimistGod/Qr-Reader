@@ -15,8 +15,10 @@ const corsOptions = {
     origin: ["https://qr-reader-frontend.vercel.app","https://qr-reader-frontend.vercel.app/","https://qr-reader-liart.vercel.app", "http://localhost:3000"],
     methods: ["POST", "GET", "PUT", "DELETE"],
     credentials: true,
+    "preflightContinue": false
   };
 
+  console.log(corsOptions)
 app.use(cors(corsOptions))
 
 
