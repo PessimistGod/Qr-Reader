@@ -17,7 +17,7 @@ const corsOptions = {
     credentials: true,
   };
 
-app.use(cors(corsOptions))
+app.use(cors(null , corsOptions))
 
 
 const pool = new Pool({
