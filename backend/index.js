@@ -12,9 +12,8 @@ app.use(express.json());
 
 
 
-app.use(cors())
+app.use(cors({ origin: '*' }));
 
-app.options("*", cors())
 
 const pool = new Pool({
     connectionString: process.env.POSTGRES_URL + "?sslmode=require",
