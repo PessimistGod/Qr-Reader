@@ -58,7 +58,7 @@ app.post('/signup', async (req, res) => {
 
 
 // Login with existing user
-app.post('/login', async (req, res) => {
+app.post('/login', cors(corsOptions),async (req, res) => {
     try {
         const { email, password } = req.body;
         const query = 'SELECT * FROM users WHERE email = $1';
