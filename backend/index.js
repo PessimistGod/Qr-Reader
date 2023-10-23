@@ -26,6 +26,11 @@ const pool = new Pool({
 
 
 
+
+app.get('/', (req, res) => {
+    res.send("QR Code Api");
+  });
+
 // Sign up a new user
 app.post('/signup', async (req, res) => {
     try {
